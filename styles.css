@@ -1,0 +1,424 @@
+/* ----
+ RESET 
+ ---- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+
+/* ------------------------
+
+    GLOBAL STYLES
+
+-------------------------- */
+
+
+body {
+    background: #F7F5F3;
+    padding: 70px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ---------------
+    Titles
+------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.8em;
+}
+
+h5 {
+    font-size: 1.6em;
+}
+
+h6 {
+    font-size: 1.4em;
+}
+
+
+
+/* ---------------------
+    Width Containers
+------------------------*/
+
+.width-regular {
+    max-width: 1250px;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+
+
+/* -----------
+    Menus
+------------ */
+
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ---------------
+Links
+----------------- */
+a {
+    text-decoration: none;
+    color: #467577;
+    transition: .2s ease-in-out color;
+}
+
+a:hover {
+    color: #58a3a6;
+}
+
+/* buttons */
+button {
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    padding: .5em .9em;
+    background: cadetblue;
+    border-radius: 3px;
+    color: #000000;
+    transition: .2s ease-in-out background-color;
+    box-shadow: none;
+    border: none;
+}
+
+.button:hover {
+    color: #000000;
+    background: #77b7b9;
+}
+
+button.no-style {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* ----------------
+NAV BAR
+------------------*/
+.nav-bar {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar .logo a {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+.nav-bar .menu {
+    gap: 2rem;
+}
+
+/* ----------------
+    Page Headers
+-------------------*/
+header#hero {
+    padding: 3rem 0;
+    font-size: 1.1em;
+}
+
+header#hero h1 span {
+    color: cadetblue;
+}
+
+header.page-header {
+    text-align: center;
+}
+
+/* -------------------
+    Footer
+--------------------*/
+footer {
+    padding: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #000000;
+    font-weight: 600;
+}
+
+
+
+/* -------------------
+    Modal
+-----------------------*/
+.modal {
+    display: none;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 650px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: #000000;
+    opacity: .2;
+}
+
+
+
+.modal .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+}
+
+/* open and close */
+.modal.reveal {
+    display: block;
+    animation: fade-in .5s ease forwards;
+}
+
+.modal.closing {
+    display: block;
+    animation: fade-out .5s ease forwards;
+    pointer-events: none;
+}
+
+
+
+/* ---------------
+    Tile
+------------------- */
+.tile .tile-wrap {
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px -13px #000000;
+}
+
+.tile .tile-content {
+    padding: 1rem;
+}
+
+.tile .tile-image {
+    height: 200px;
+}
+
+.tile .tile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+/*----------------
+    Animations
+------------------ */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* -------------
+    icons
+-------------------*/
